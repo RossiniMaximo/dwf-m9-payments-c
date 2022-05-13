@@ -30,6 +30,8 @@ async function handlePost(req, res, userId) {
 
   const preference = await createPreference({
     external_reference: order.id,
+    notification_url:
+      "https://dwf-m9-payments-challenge.vercel.app/webhooks/mercadopago",
     items: [
       {
         title: product.title,
